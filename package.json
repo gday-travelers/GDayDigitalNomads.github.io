@@ -1,0 +1,38 @@
+{
+  "name": "gday-digital-nomads",
+  "version": "1.0.0",
+  "description": "My Personal Blog",
+  "author": "Jordan Rancie",
+  "license": "ISC",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jordanrancie/jordanrancie.github.io.git"
+  },
+  "keywords": [
+    "massive",
+    "html",
+    "premium",
+    "template"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-plumber-notifier": "0.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-clean-css": "^3.4.0",
+    "gulp-clean": "^0.3.2"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "simple-line-icons": "^2.3.2"
+  },
+  "scripts": {
+    "jekyll":  "gulp setup && jekyll serve --profile --config _config.dev.yml --host=0.0.0.0",
+    "setup": "gulp setup",
+    "clean": "gulp clean",
+    "watch": "gulp"
+  }
+}

@@ -1,0 +1,77 @@
+---
+layout: portfolio
+permalink: /shop/
+---
+        <!--hero section-->
+        <div class="banner-state vertical-align banner-p height-600">
+            <div class="container-mid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                            <div class="banner-title">
+                                <h2 class="text-uppercase m-bot-10 inline-block">mid season sale</h2>
+                                <h1 class="text-uppercase theme-bg theme-bg-space light-txt m-bot-30">up to 30% off </h1>
+                                <p class="p-top-30">Duis Autem Vel Eum Iriure Dolor In Hendrerit In Vulputate Velit Esse Molestie,
+                                    <br/>Vel Illum Dolore Eu Feugiat Nulla Facilisis At Vero Eros Et Accumsan</p>
+                                <a href="#" class="btn btn-medium btn-light-solid  "> Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--hero section-->      
+
+
+  <!--body content start-->
+        <section class="body-content page-content">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-12">
+
+                        <div class="text-center">
+                            <ul class="portfolio-filter">
+                                <li class="active"><a href="#" data-filter="*"> All</a></li>
+
+                                {% for cat in site.data.category-mapping %}
+                                <li><a href="#" data-filter=".{{ cat | downcase | replace : ' ', '-' }}">{{ cat | camelcase }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="portfolio portfolio-with-title portfolio-masonry col-4 gutter ">
+ 
+                            {% for product in site.shop %}
+                            <div class="portfolio-item {{ product.categories | join : ',' | replace : ' ', '-' | replace : ',', ' ' }} {{ product.tags | join : ',' | replace : ' ', '-' | replace : ',', ' ' }}">
+                                <div class="product-list">
+                                    <div class="product-img">
+                                        {% for image in product.images limit:2 %}
+                                        <a href="{{ product.url }}"><img src="{{ site.product-image-url }}/{{ image.image-url }}" alt="{{ image.title }}"></a>
+                                        {% if product.discounted %}
+                                        <!-- custom css here -->
+                                        <div class="sale-label">Sale</div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+
+                                    <div class="portfolio-title">
+                                        <h4><a href="#">{{ product.title }}</a></h4>
+                                        <p><a href="#">category 1</a> , <a href="#">category 2</a> </p>
+                                    </div>
+                                    <div class="product-price"><del>{{ product.discounted }}</del> {{ product.price }}</div>
+                                    {% if product.rating %}
+                                    {% assign rating = product.rating %}
+                                    {% include ratings.html %}
+                                    {% endif %}
+                                    <!--<div class="product-btn">
+                                        <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                    </div>   -->
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--body content end-->
