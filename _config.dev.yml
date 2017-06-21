@@ -4,7 +4,7 @@ email:
 description: An introduction to becoming a digital nomad
 
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
-url: "https://www.gdaydigitalnomads.com" # the base hostname & protocol for your site
+url: "https://www.gdaytravelers.com" # the base hostname & protocol for your site
 resource-url: "/static"
 post-image-url: "/images"
 static-image-url: "/static/img"
