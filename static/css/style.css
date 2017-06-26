@@ -9503,7 +9503,7 @@ div .playful-feature-parallax {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), black), url("../img/services/web-design-heroshot.jpg"); }
 
 .page-title.about-me-background {
-  background-image: url(../img/about/profile.jpg);
+  background-image: url(../img/audreyprofile.png);
   background-position: 50% 0;
   background-size: cover;
   /*background-attachment: fixed;*/
@@ -9718,3 +9718,12 @@ h4.timeline-title {
   line-height: 1.5;
   margin: 0 0 30px 0;
   font-weight: normal; }
+
+.page-title.about-audrey-background {
+  background-image: url(../img/about/audrey-profile-banner.png);
+  background-position: 50% 0;
+  background-size: cover;
+  /*background-attachment: fixed;*/
+  background-repeat: no-repeat;
+  padding: 200px 0;
+  height: 630px; }
